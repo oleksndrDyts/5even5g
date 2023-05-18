@@ -35,7 +35,7 @@ const NICK = 'sandbox\n↓ nickname';
 
 const bot = new TelegramBot(tgToken, { polling: true });
 const doc = new GoogleSpreadsheet(tableId);
-console.log(TableKey.replace(/\\n/g, '\n'));
+
 (async () => {
   await doc.useServiceAccountAuth({
     client_email: TableEmail,
