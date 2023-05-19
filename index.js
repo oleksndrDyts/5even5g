@@ -44,6 +44,7 @@ const doc = new GoogleSpreadsheet(tableId);
 
   bot.on('message', async msg => {
     const username = msg.from.username;
+    const chatId = msg.chat.id;
 
     if (!team.includes(username.toLowerCase())) {
       return;
@@ -70,7 +71,7 @@ const doc = new GoogleSpreadsheet(tableId);
     // const m = team.map((el, idx) => `${tt[idx]} : ${users[el]}\n`);
     const m = team.map((el, idx) => `${tteam[idx]} : ${users[el]}\n`);
     await bot.sendMessage(
-      '527306644',
+      chatId,
       ` @${m[0]} \n @${m[1]} \n @${m[2]} \n @${m[3]} \n @${
         m[4]
       } \n TOTAL: ${team.reduce((acc, el) => acc + users[el], 0)}`
