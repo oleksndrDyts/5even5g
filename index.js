@@ -7,13 +7,7 @@ const TableKey = process.env.TABLE_KEY;
 const TableEmail = process.env.TABLE_EMAIL;
 const tgToken = process.env.KEY_API;
 
-const tt = [
-  'Redfield A',
-  'Саша',
-  'Vi2@liT',
-  'Kostya Kondratiuk',
-  'Даня Онищенко',
-];
+const tt = ['Redfield A', 'Саша', 'Vi2@liT', 'Kostya Kondratiuk', 'Богдан .'];
 
 const team = [
   process.env.s1.toLowerCase(),
