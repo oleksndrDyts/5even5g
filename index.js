@@ -62,7 +62,6 @@ const doc = new GoogleSpreadsheet(tableId);
         return { ...acc };
       }
     }, {});
-    console.log(users);
     // -1001595776037
     // const m = team.map((el, idx) => `${tt[idx]} : ${users[el]}\n`);
     const m = team.map((el, idx) => `${tteam[idx]} : ${users[el]}\n`);
