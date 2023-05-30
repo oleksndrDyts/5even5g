@@ -54,13 +54,15 @@ const doc = new GoogleSpreadsheet(tableId);
       const gamer = el[GAMER];
       // _rawData[7]
       if (team.includes(gamer)) {
-        const curScore = el._rawData[7] === 200 + '' ? 1 : 0;
+        const curScore =
+          el._rawData[7] === 200 + '' || el._rawData[7] === 50 + '' ? 1 : 0;
 
         return { ...acc, [gamer]: (acc[gamer] || 0) + curScore };
       } else {
         return { ...acc };
       }
     }, {});
+    console.log(users);
     // -1001595776037
     // const m = team.map((el, idx) => `${tt[idx]} : ${users[el]}\n`);
     const m = team.map((el, idx) => `${tteam[idx]} : ${users[el]}\n`);
